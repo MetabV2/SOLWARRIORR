@@ -1,4 +1,13 @@
-for i,v in pairs(workspace.Statues.StatueOfSolWarrior:GetDescendants()) do
+
+local count = 1
+for k, v in pairs(workspace.Statues:GetChildren()) do 
+   if v.Name == "StatueOfSolWarrior" then
+       v.Name = "METAB" .. count
+       count += 1
+   end
+end
+
+for i,v in pairs(workspace.Statues.METAB2:GetDescendants()) do
 if v:IsA("ClickDetector") then
 fireclickdetector(v)
 end
